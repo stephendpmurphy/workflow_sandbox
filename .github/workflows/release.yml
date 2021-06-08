@@ -19,4 +19,4 @@ jobs:
       with:
         artifacts: "output/*.txt"
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: ${{VERSION_MAJOR}}.${{VERSION_MINOR}}.${{VERSION_PATCH}}
+        tag: ${{env.VERSION_MAJOR}}.${{env.VERSION_MINOR}}.${{env.VERSION_PATCH}}
