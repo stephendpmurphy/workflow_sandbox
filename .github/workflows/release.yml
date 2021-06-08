@@ -1,0 +1,17 @@
+name: Create Release & Upload Artifacts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: ncipollo/release-action@v1
+      with:
+        artifacts: "output/*.txt"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: "0.1.0"
